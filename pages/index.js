@@ -34,14 +34,15 @@ const Home = ({ products, bannerData }) => (
     <Banner Banner={bannerData.length && bannerData[0]}  />
     <div className="products-heading">
       <h2>Best food Store</h2>
-      <p>dine in or have atke aways</p>
+      <p>dine in or have take aways</p>
     </div>
 
     <div className="products-container">
-      {products?.map((product) => <Product key={product._id} product={product} />)}
+      {products?.map((product) => <Product key={product._id} product={product} />)} 
+      {/* It's rendering a list of Product components, one for each item in the products array, safely and efficiently. */}
     </div>
 
-    <FooterBanner footerBanner={bannerData && bannerData[0]} />
+    <FooterBanner footerbanner={bannerData && bannerData[0]} />
   </div>
 );
 
@@ -56,5 +57,10 @@ export const getServerSideProps = async () => {
     props: { products, bannerData }
   }
 }
+// Runs on every request (not static).
+
+// Fetches products and bannerData from Sanity.
+
+// Passes them to your page component as props so you can use them in your UI.
 
 export default Home;

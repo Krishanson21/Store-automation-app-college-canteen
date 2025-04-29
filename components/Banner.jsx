@@ -59,10 +59,10 @@ const Banner = ({ Banner }) => {
   return (
     <div className="banner-container">
       <div>
-        <p className="beats-solo">{Banner.smallText}</p>
+        <p className="chole_bhature">{Banner.smallText}</p>
         <h3>{Banner.midText}</h3>
         <h1>{Banner.largeText1}</h1>
-        <img src={urlFor(Banner.image)} alt="Samosa" className="banner-image" />
+        <img src={urlFor(Banner.image)} alt="chole_bhature" className="banner-image" />
 
         <div>
           <Link href={`/product/${Banner.product}`}>
